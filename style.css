@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(13, 64, 136);
+    color: white;
+    padding-top: 70px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background-color: rgb(13, 64, 136);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: rgb(141, 197, 246);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(202, 206, 224);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: rgb(141, 197, 246);
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    gap: 80px;
+    padding: 50px 10%;
+}
+
+.image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 0 25px rgb(80, 168, 227);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.greetings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.firstline {
+    font-size: 2.2rem;
+    color: #efefef;
+}
+
+.secondline {
+    font-size: 1.5rem;
+    color: rgb(141, 197, 246);
+    font-weight: 600;
+}
+
+.thirdline {
+    font-size: 1.1rem;
+    color: #ccd6f6;
+    max-width: 500px;
+}
+
+/* Resume & Socials */
+.action-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.resume {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid rgb(30, 152, 239);
+    color: rgb(57, 197, 210);
+    text-decoration: none;
+    border-radius: 5px;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.resume:hover {
+    background: rgb(30, 152, 239);
+    color: white;
+}
+
+.links {
+    display: flex;
+    gap: 25px;
+}
+
+.links i {
+    font-size: 2.2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.links i:hover {
+    color: rgb(141, 197, 246);
+    transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills-container {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.mid-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    min-width: 110px;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    background: white;
+    color: rgb(13, 64, 136);
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+}
+
+/* Projects Section */
+.projects-container {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.projects-container .mid-name2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Added padding to prevent border clipping during hover */
+    padding: 20px 0; 
+    gap: 40px;
+}
+
+.card1, .card2 {
+    /* max-height: 250px; */
+    max-width: 200px;
+    height: 300px;
+    width: 250px;
+    border: 2px solid white;
+    border-radius: 12%;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth hover transition */
+    background-color: rgba(255, 255, 255, 0.05); /* Optional: slight background */
+}
+
+/* Half-height image setup */
+.card-img1 {
+    height: 50%; /* Image takes exactly half height */
+    width: 100%;
+    background-image: url('images/Gemini_Generated_Image_2mawzh2mawzh2maw.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12% 12% 0 0;
+}
+
+.card-img2 {
+    height: 50%; /* Image takes exactly half height */
+    width: 100%;
+    background-image: url('images/Gemini_Generated_Image_xr2ryaxr2ryaxr2r.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12% 12% 0 0;
+}
+
+.name {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #ccd6f6;
+}
+
+.lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.8125rem;
+    gap: 1.25rem;
+    color: aqua;
+}
+
+.lang span {
+    border: 1px solid white;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.link i {
+    font-size: 1.7rem;
+    color: #ccd6f6;
+}
+
+/* FIX: Specific hover targeting */
+.card1:hover, .card2:hover {
+    transform: translateY(-10px); /* Moves card up without breaking border */
+    border-color: rgb(141, 197, 246); /* Subtle glow effect */
+}
+
+.lang span:hover {
+    background-color: white;
+    color: darkblue;
+    transform: translateY(-3px);
+}
+
+.link i:hover {
+    color: white;
+}
+.Education {
+    min-height: 85vh; /* Changed to min-height so content doesn't overflow */
+    width: 100%;
+    padding: 50px 0;
+}
+
+.mid-name3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.edcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.edcard1{
+    margin-bottom: 40px;
+}
+
+.edcard1,.edcard2 {
+    display: flex;
+    flex-direction: row; /* Desktop: Content Left, Image Right */
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px 10%;
+    width: 100%;
+    
+}
+
+.edcard1-content,.edcard2-content{
+    flex: 1;
+    font-size: 1.4rem; /* Slightly larger for better readability */
+    line-height: 1.8;
+    text-align: left;
+}
+
+.edcard1-img ,.edcard2-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    border-radius: 12%;
+    transition: 0.3s;
+}
+
+.edcard1-img img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 12%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Adds a professional look */
+}
+.edcard2-img img{
+      width: 100%;
+    max-width: 550px;
+    /* height: auto; */
+    height: 170px;
+    border-radius: 12%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.edcard1-img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px lightblue;
+}
+.edcard2-img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px lightblue;
+}
+/* --- RESPONSIVE FIX --- */
+@media (max-width: 768px) {
+    .edcard1,.edcard2{
+        flex-direction: column; /* Stacks vertically: Text on top, Image bottom */
+        text-align: center;
+        gap: 30px;
+        padding: 20px 5%;
+    }
+
+    .edcard1-content,.edcard2-content {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .edcard1-img img {
+        max-width: 100%; /* Image takes full width of phone */
+    }
+    .edcard2-img img{
+        max-width: 100%;
+    }
+}
+/* Media Queries */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .greetings,
+    .action-items {
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    .card1, .card2 {
+        max-height: 250px;
+    }
+   
+}
+@media (max-width:768px){
+     .edcard1{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .edcard1 img{
+       width: 100%;
+       max-width: 400px;
+    }
+    .edcard1-content{
+        font-size: 1rem;
+    }
+}
