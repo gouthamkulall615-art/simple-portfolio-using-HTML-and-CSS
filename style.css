@@ -137,6 +137,12 @@ body {
     text-align: center;
 }
 
+.skill-card img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 .mid-name {
     font-size: 2.5rem;
     font-weight: bold;
