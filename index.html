@@ -124,46 +124,49 @@
             <span class="first-word">Send</span>
             <span class="second-word">Message</span>
         </div>
+
         <div class="contact-sub">
             <p>Send me a message and I will get back to you soon!</p>
         </div>
 
-        <form action="#">
+        <form id="contact-form">
+
             <div class="input-group">
-                <label for="user-name">Name</label>
+                <label>Name</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" id="user-name" placeholder="Your name" required>
+                    <input type="text" name="user_name" placeholder="Your name" required>
                 </div>
-            </div>
             </div>
 
             <div class="input-group">
-                <label for="user-email">Email</label>
+                <label>Email</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" id="user-email" placeholder="your.email@example.com" required>
+                    <input type="email" name="user_email" placeholder="your.email@example.com" required>
                 </div>
             </div>
 
             <div class="input-group">
-                <label for="msg-subject">Subject</label>
+                <label>Subject</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-pen"></i>
-                    <input type="text" id="msg-subject" placeholder="What's this about?">
+                    <input type="text" name="subject" placeholder="What's this about?">
                 </div>
             </div>
-
 
             <div class="input-group">
-                <label for="user-msg">Message</label>
+                <label>Message</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-comment-dots"></i>
-                    <textarea id="user-msg" placeholder="Write your message here..." rows="5" required></textarea>
+                    <textarea name="message" placeholder="Write your message here..." rows="5" required></textarea>
                 </div>
             </div>
 
-            <button type="submit" class="send-btn">Send Now 🚀</button>
+            <button type="submit" class="send-btn">
+                Send Now 🚀
+            </button>
+
         </form>
     </section>
     <footer>
@@ -184,6 +187,34 @@
             <p>&copy; 2026 Goutham M, Built with 🔥</p>
         </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        // Initialize EmailJS with your Public Key
+        emailjs.init("WwfVICmmJtHJHVhTi");
+
+        // Handle form submit
+        document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                emailjs.sendForm(
+                    "service_dlducng",      // Replace if different
+                    "template_ve6xwdt",
+                    this
+                )
+                    .then(function () {
+                        alert("Message sent successfully!");
+                    })
+                    .catch(function (error) {
+                        console.error("FAILED...", error);
+                    });
+            });
+    </script>
+
 </body>
 
 </html>
